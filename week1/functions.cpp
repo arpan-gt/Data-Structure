@@ -1,4 +1,7 @@
 // todo 1. WAP to find factorial
+// todo 2. WAP to print multiplication table
+// todo 3. WAP to print fibonacci series upto n numbers
+// todo 4. WAP to check if Armstrong or not
 
 #include <iostream>
 using namespace std;
