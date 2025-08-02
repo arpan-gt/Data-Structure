@@ -1,8 +1,16 @@
 // todo 1. WAP to print binaryPattern 1/0
 // todo 2. WAP to print rhombus pattern
 // todo 3. WAP to print palindrome pattern
-// todo 3. WAP to print hollowSquare pattern
-// todo 3. WAP to print star triangle |\ pattern
+// todo 4. WAP to print hollowSquare pattern
+// todo 5. WAP to print star triangle |\ pattern
+// todo 6. WAP to print invertedStar triangle pattern
+// todo 7. WAP to print half Pyramid pattern
+// todo 8. WAP to print character pyramid pattern
+// todo 9. WAP to print hollow rectangle pattern
+// todo 10. WAP to print inverted Rotated pyramid pattern
+// todo 11. WAP to print floyd triangle pattern
+// todo 12. WAP to print diamond pattern
+// todo 13. WAP to print star triangle |\ pattern
 
 #include <iostream>
 using namespace std;
@@ -202,6 +210,82 @@ void floydTriangle(int n)
   }
 }
 
+// diamond pattern
+void diamond(int n)
+{
+  cout << "\nDiamond\n";
+  // upper part
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= n - i; j++)
+    {
+      cout << " ";
+    }
+    for (int j = 1; j <= 2 * i - 1; j++)
+    {
+      cout << "*";
+    }
+
+    cout << "\n";
+  }
+
+  // lower part
+
+  for (int i = 1; i <= n - 1; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << " ";
+    }
+    for (int j = 1; j <= 2 * (n - i) - 1; j++)
+    {
+      cout << "*";
+    }
+
+    cout << "\n";
+  }
+}
+
+// butterfly
+void butterfly(int n)
+{
+  cout << "\nbutterfly pattern \n";
+  // // upper part
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << "*";
+    }
+    for (int j = 1; j <= 2 * (n - i); j++)
+    {
+      cout << " ";
+    }
+    for (int j = 1; j <= i; j++)
+    {
+      cout << "*";
+    }
+    cout << "\n";
+  }
+
+  // lower
+  for (int i = n; i >= 1; i--)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << "*";
+    }
+    for (int k = 1; k <= 2 * (n - i); k++)
+    {
+      cout << " ";
+    }
+    for (int l = 1; l <= i; l++)
+    {
+      cout << "*";
+    }
+    cout << "\n";
+  }
+}
 
 int main()
 {
@@ -216,5 +300,7 @@ int main()
   hollowRectangle(5);
   invertedRotatedPyramid(5);
   floydTriangle(5);
+  diamond(5);
+  butterfly(4);
   return 0;
 }
