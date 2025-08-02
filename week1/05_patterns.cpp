@@ -10,7 +10,7 @@
 // todo 10. WAP to print inverted Rotated pyramid pattern
 // todo 11. WAP to print floyd triangle pattern
 // todo 12. WAP to print diamond pattern
-// todo 13. WAP to print star triangle |\ pattern
+// todo 13. WAP to print butterfly pattern
 
 #include <iostream>
 using namespace std;
