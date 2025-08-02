@@ -1,6 +1,8 @@
 // todo 1. WAP to print binaryPattern 1/0
 // todo 2. WAP to print rhombus pattern
 // todo 3. WAP to print palindrome pattern
+// todo 3. WAP to print hollowSquare pattern
+// todo 3. WAP to print star triangle |\ pattern
 
 #include <iostream>
 using namespace std;
@@ -64,10 +66,155 @@ void printPalindrome(int n)
     cout << "\n";
   }
 }
+
+// * * 4.
+void printHollowSquare(int n)
+{
+  cout << "\nHollow Square\n";
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= n; j++)
+    {
+      if (i == 1 || i == n || j == 1 || j == n)
+      {
+        cout << "*";
+      }
+      else
+      {
+        cout << " ";
+      }
+    }
+    cout << "\n";
+  }
+}
+
+//-------* triangle|\ pattern
+
+void triangle(int n)
+{
+  cout << "\ntriangle pattern\n";
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << "*";
+    }
+    cout << "\n";
+  }
+}
+
+// invertedStar
+void invertedTriangle(int n)
+{
+  cout << "\nInverted Star Pattern\n";
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= n - i + 1; j++)
+    {
+      cout << "*";
+    }
+    cout << "\n";
+  }
+}
+
+// half pyramid
+void printHalfPyramid(int n)
+{
+  cout << "\n half pyramid\n";
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << j;
+    }
+    cout << "\n";
+  }
+}
+
+// characterPyramid
+void characterPyramid(int n)
+{
+  cout << "\ncharacter Pyramid\n";
+  char c = 'A';
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << c;
+      c++;
+    }
+    cout << "\n";
+  }
+}
+
+// hollow reectangle
+void hollowRectangle(int n)
+{
+  cout << "\nhollow rectangle\n";
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= n + 2; j++)
+    {
+      if (i == 1 || i == n || j == 1 || j == n + 2)
+      {
+        cout << " * ";
+      }
+      else
+      {
+        cout << "   ";
+      }
+    }
+    cout << "\n";
+  }
+}
+
+// innvertedRotatedPyramid
+void invertedRotatedPyramid(int n)
+{
+  cout << "\nInverted Rotated Pyramid\n";
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= n - i; j++)
+    {
+      cout << "   ";
+    }
+    for (int k = 1; k <= i; k++)
+    {
+      cout << " * ";
+    }
+    cout << "\n";
+  }
+}
+
+// floyd's triangle
+void floydTriangle(int n)
+{
+  cout << "\nfloyd triangle\n";
+  int num = 1;
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << " " << num << " ";
+      num++;
+    }
+    cout << "\n";
+  }
+}
+
+
 int main()
 {
   printBinaryPattern(5);
   printRhombus(5);
   printPalindrome(5);
+  printHollowSquare(8);
+  triangle(5);
+  invertedTriangle(5);
+  printHalfPyramid(5);
+  characterPyramid(5);
+  hollowRectangle(5);
+  invertedRotatedPyramid(5);
+  floydTriangle(5);
   return 0;
 }
