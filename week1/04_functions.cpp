@@ -97,7 +97,9 @@ void isArmStrong(int n)
   }
 }
 
-int binaryToDecimal(int num)
+// binary to decimal
+
+void binaryToDecimal(int num)
 {
   int n = num;
   int pow = 1;
@@ -110,13 +112,32 @@ int binaryToDecimal(int num)
     pow *= 2;
     n /= 10;
   }
-  return decimal;
+
+  cout << "decimal of binary " << num << " is " << decimal << "\n";
 }
+
+// decimal to binary
+void decimalToBinary(int num)
+{
+  int n = num;
+  int binary = 0;
+  int pow = 1;
+  while (n > 0)
+  {
+    int rem = n % 2;
+    binary += rem * pow;
+    pow *= 10;
+    n /= 2;
+  }
+  cout << "binary of decimal " << num << " is " << binary << "\n";
+}
+
 int main()
 {
   // factorial(5);
   // multiplicationTable(5);
   // fibonacci(5);
   // isArmStrong(123);
-  cout << binaryToDecimal(1111) << "\n";
+  // binaryToDecimal(1111);
+  decimalToBinary(6);
 }
