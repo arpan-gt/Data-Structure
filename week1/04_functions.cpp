@@ -97,10 +97,26 @@ void isArmStrong(int n)
   }
 }
 
+int binaryToDecimal(int num)
+{
+  int n = num;
+  int pow = 1;
+  int decimal = 0;
+
+  while (n > 0)
+  {
+    int lastDigit = n % 2;
+    decimal += lastDigit * pow;
+    pow *= 2;
+    n /= 10;
+  }
+  return decimal;
+}
 int main()
 {
-  factorial(5);
-  multiplicationTable(5);
-  fibonacci(5);
-  isArmStrong(123);
+  // factorial(5);
+  // multiplicationTable(5);
+  // fibonacci(5);
+  // isArmStrong(123);
+  cout << binaryToDecimal(1111) << "\n";
 }
