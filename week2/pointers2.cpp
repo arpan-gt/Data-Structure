@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+void multipleBy2(int &a, int &b, int &c)
+{
+  a *= 2;
+  b *= 2;
+  c *= 2;
+
+  cout << a << b << c << "\n";
+}
 int main()
 {
   // todo solve Q1
@@ -19,6 +27,10 @@ int main()
 
   cho += a;
   *ptr2 += ch;
-  cout << a << ", " << ch << "\n"; //129,a
+  cout << a << ", " << ch << "\n"; // 129,a
+
+  // todo solve Q3
+  int m = 1, n = 2, p = 3;
+  multipleBy2(m, n, p);
   return 0;
 }
