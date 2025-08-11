@@ -1,21 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void passbByValue(int param)
+void passbByValue(int x)
 {
-  cout << param;
+  cout << x;
   int a = 20;
   cout << "pass by value , a: " << a << "\n";
 }
 
-void passByReference(int param1, int param2, int param3)
+void passByReference(int a, int b, int c)
 {
-  param1 *= 2;
-  param2 *= 2;
-  param3 *= 2;
-  cout << param1 << "\n"
-       << param2 << "\n"
-       << param3 << "\n";
+  a *= 2;
+  b *= 2;
+  c *= 2;
+  cout << a << "\n"
+       << b << "\n"
+       << c << "\n";
 }
 int main()
 {
